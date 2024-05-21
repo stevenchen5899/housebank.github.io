@@ -1,81 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>響應式一頁式網站</title>
+<title>響應式手機網頁</title>
 <style>
-  body, html {
+  body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     font-family: Arial, sans-serif;
-  }
-
-  .container {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    height: 100vh;
+    background-image: url('https://lh3.googleusercontent.com/pw/AP1GczPQOlK-7U_BOSVv6VDqIVxfklJyEiw_DhPQnz42lJguFL6ULIiBRLn83sXz0IP2i1NW5fSn9iKvCteprgln2FKCSp6o6p8popr6FOQFZoopQHzfY46VGc57DDZG0b9kl3xxinSU03xh9FXVpduSL-i-Rv9ASzsc-ROXK2tdCHe_S3Q-RoUdvi3ojw6IKHxGvfCf3kAKkCjhBkEZlzTvA7C07klb1G4aDp2fIge-9UJPpstj0-ow1rotMquMwa9DvHuqMRC05a3nFVN5192Pq4dW2AFsUnwgKftpWAN-Hs4MZvk5FgjBLapqAEgkYU5Q14AW1PwusfWEs4l2lhlxVwSfvwQ7H2GdRNOIi8fuYCZI9rW9vCzpYAFbFGQPRCvyFQgzKvPcXgOP-3PybAqh9J9KcSl8Qpak4d3FMwoMtbmzuYeoFJf7TEmde20saL5MhTXrKFLoJ3pglrzmTClmSZfnxeiTGoxDxsJLYqTLVBTRLiLgqZQDZie5kc3NX5nnk3C74SZgXxqaYySB3TmwjvkwIKTsOpny4Xc8S4Xb_edpzLJKiE3s720juyPtnscwOA5pRtLbS8-VNkwE3ohJrBlpWz0hXcB3vFzyVOc4JMJDNGfhpRf8j2qJt3oWyFnl8pPLC2hOvUDB-seV48ZkSliKBAgFUfHwK99-h0H1lJU1b-CGPUoOzHM3DOBvA77udO2-KWrbJP1oYRcf6rIbAJ74Vz71smJXYB7jqp38HenmBUkuWwzC6zdI4wbhtu5xKK3Co977k4g2hW7Dgvx8CEqWeUnUh-M0D0o_sKUiNC2HZ2QgwdcCMyo_25sxuKeHfbZA1oR3H7EFna9-xeF3WE8a4zcW4iRV1X9PXQi9cXK2i36_-wi5rxhHxqNTz1qR-Kz0khX4gbdCZelo_Lwu5_nPHw=w549-h768-s-no-gm?authuser=0');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
-  .responsive-img {
-    width: 100%;
-    height: auto;
-  }
-
-  .footer {
-    width: 100%;
-    background-color: #f8f9fa;
-    padding: 10px 0;
+  .buttons {
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid #ced4da;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
   }
 
-  .footer a {
-    flex-grow: 1;
-    margin: 0 10px;
-    text-decoration: none; /* 確保連結無下劃線 */
-  }
-
-  .footer button {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    color: white;
-    border: none;
+  .button {
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    flex: 1;
+    margin: 0 10px;
   }
 
-  .footer .left-button {
-    background-color: green;
+  .line-button {
+    background-color: #00b900; /* LINE官方標準顏色 */
   }
 
-  .footer .right-button {
+  .call-button {
     background-color: red;
+  }
+
+  .button:hover {
+    opacity: 0.8;
   }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <img src="https://cc.tvbs.com.tw/img/program/upload/2024/05/21/20240521120223-26d567e7.jpg">
-</div>
-
-<div class="footer">
-  <a href="https://line.me/R/" class="left-button">
-    <button class="left-button">加 Line</button>
-  </a>
-  <a href="tel:0968333591" class="right-button">
-    <button class="right-button">撥打電話</button>
-  </a>
+<div class="buttons">
+  <a href="https://line.me/R/" class="button line-button">加 LINE</a>
+  <a href="tel:0968333591" class="button call-button">撥打手機</a>
 </div>
 
 </body>
