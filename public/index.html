@@ -11,14 +11,31 @@
     font-family: Arial, sans-serif;
   }
 
-  .container {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding-bottom: 100px; /* 為底部按鈕留出空間 */
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* 使 header 处于最顶层 */
   }
 
-  .image {
+  .header img {
+    width: 100px; /* 调整图片宽度 */
+    height: auto;
+  }
+
+  .main {
+    margin-top: 150px; /* 调整 main 内容距离顶部的间距，确保内容不被 header 遮挡 */
+    padding: 20px;
+  }
+
+  .main img {
     width: 100%;
     height: auto;
+    margin-bottom: 20px; /* 调整图片之间的间距 */
   }
 
   .buttons {
@@ -26,10 +43,12 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff; /* 底部按鈕背景色 */
+    background-color: #f8f9fa;
+    padding: 10px 0;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
+    border-top: 1px solid #ced4da;
+    z-index: 1000; /* 使 buttons 处于最顶层 */
   }
 
   .button {
@@ -56,10 +75,14 @@
 </head>
 <body>
 
-<div class="container">
-  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="圖片1" class="image">
-  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="圖片1" class="image">
-  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="圖片1" class="image">
+<div class="header">
+  <img src="https://photos.google.com/photo/AF1QipP1t55fcDqPaQRh-DSSCI013Pl23BE0FDf1BTb3" alt="描述圖片">
+</div>
+
+<div class="main">
+  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="描述圖片1">
+  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="描述圖片1">
+  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="描述圖片1">
 </div>
 
 <div class="buttons">
