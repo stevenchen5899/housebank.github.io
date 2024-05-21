@@ -5,37 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>手機版網頁</title>
 <style>
-  body {
+  body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
   }
 
-  .header {
+  .fixed-image {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #f8f9fa;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000; /* 使 header 处于最顶层 */
+    height: 50vh; /* Adjust the height as needed */
+    background-image: url('  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="第二張圖片">
+');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
   }
 
-  .header img {
-    width: 100px; /* 调整图片宽度 */
-    height: auto;
+  .content {
+    padding-top: 50vh; /* Same as the fixed image height */
+    padding-bottom: 100px; /* Height of the buttons */
+    background-color: white;
   }
 
-  .main {
-    margin-top: 150px; /* 调整 main 内容距离顶部的间距，确保内容不被 header 遮挡 */
-    padding: 20px;
-  }
-
-  .main img {
+  .content img {
     width: 100%;
     height: auto;
-    margin-bottom: 20px; /* 调整图片之间的间距 */
+    display: block;
   }
 
   .buttons {
@@ -43,46 +42,50 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 10px 0;
     display: flex;
     justify-content: space-around;
     border-top: 1px solid #ced4da;
-    z-index: 1000; /* 使 buttons 处于最顶层 */
+  }
+
+  .buttons a {
+    text-decoration: none;
   }
 
   .button {
-    padding: 10px 20px;
+    flex-grow: 1;
+    margin: 0 10px;
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+    border: none;
     border-radius: 5px;
+    text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
   }
 
   .line-button {
     background-color: #00b900; /* LINE官方標準顏色 */
-    color: white;
   }
 
   .call-button {
     background-color: red;
-    color: white;
   }
 
   .button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
   }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <img src="https://lh3.googleusercontent.com/pw/AP1GczM2mnjX3XWBTnFZv2HG-OK6qRiyxa0Obp1sDAnz-E-I9qBgzhXUfwWsgWDUJwJL5NxdA9Z1LQGAY32JoNjR9E3sL1tibytxeP0ifPxWwdOHTkdDlYreen4a7J2quKzJg2rsPUBaof9OVv8I9wP1eTtimYXKkzqhU5QD4D4u4Nl51XmCcqSgustL4lu6_slxPYzzW3V-oyQAN_Pk55Kek0vQv_vdQXf7SNItX-yhXb_m-ymAndRyP3qPSVfNoH3xdp7IwDffr-foY96hLLXeqZoOq9vMzlpFMhIJowOGfhWwz5bdt67CaLVscT_FXr-obDKTOkhCtp7XTfFf4sRE35FdEuKGxbeDgJpGBt3CX7z6ITRNAjXm0IsTKGxakqnLLkbnKbiHsNxj3QipW-KLy6mVNW9q7IFmprOx6OrOOPimF9knGatxT0_4i9tf6Op8q6_XhJGPz9_rXGbEu1EmemR3yRMzAVdSr8AMporfxXIA9lFii9mYpwz-wId717WC9nQsE-kpAK9A3De0hFnd4XASeL1KT7iteA0iRxAUF1Ps1-NLUWXlescBZ-8LKvNDFG35zLw2xqNwoN9wOx0BwMlnyKo6qydI-9ZtnXjCSiwm7HVki9Wm2JijXkGRKVW0AL4vYj7LlhTf0ysfUoqt4xQhO7eezRkMR518emZHrM0r-_0jSj87ghX2LAO3Dfm2GJxq_pKYe0bPLmQ7elqIbicN6HzJnG2sLIp6Tgk1yyIriTUM-B-9ORKZpv_qp6kJS2b5dcly7VZ7djkldQD13YI3-jHRXeCJlyTZ1c6MFa_AQCz41ZN0YDqVtfOicJ71J6SmZPUyCHTVT9D4CjcFCYu0RNlPa5HacW9jXsYVtPejX-N_WGLz-kj4AZYdF7fv0NFYF163r2SFxlji9FzLC5nyyQ=w1080-h200-s-no-gm?authuser=0" alt="描述圖片">
-</div>
+<div class="fixed-image"></div>
 
-<div class="main">
-  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="描述圖片1">
-  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="描述圖片1">
-  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="描述圖片1">
+<div class="content">
+  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="第二張圖片">
+  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="第二張圖片">
+  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="第二張圖片">
 </div>
 
 <div class="buttons">
