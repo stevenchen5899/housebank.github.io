@@ -22,6 +22,25 @@
     display: block;
   }
 
+  .banner {
+    position: fixed;
+    bottom: 50px; /* Adjust to be above the buttons */
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url('https://lh3.googleusercontent.com/pw/AP1GczM2mnjX3XWBTnFZv2HG-OK6qRiyxa0Obp1sDAnz-E-I9qBgzhXUfwWsgWDUJwJL5NxdA9Z1LQGAY32JoNjR9E3sL1tibytxeP0ifPxWwdOHTkdDlYreen4a7J2quKzJg2rsPUBaof9OVv8I9wP1eTtimYXKkzqhU5QD4D4u4Nl51XmCcqSgustL4lu6_slxPYzzW3V-oyQAN_Pk55Kek0vQv_vdQXf7SNItX-yhXb_m-ymAndRyP3qPSVfNoH3xdp7IwDffr-foY96hLLXeqZoOq9vMzlpFMhIJowOGfhWwz5bdt67CaLVscT_FXr-obDKTOkhCtp7XTfFf4sRE35FdEuKGxbeDgJpGBt3CX7z6ITRNAjXm0IsTKGxakqnLLkbnKbiHsNxj3QipW-KLy6mVNW9q7IFmprOx6OrOOPimF9knGatxT0_4i9tf6Op8q6_XhJGPz9_rXGbEu1EmemR3yRMzAVdSr8AMporfxXIA9lFii9mYpwz-wId717WC9nQsE-kpAK9A3De0hFnd4XASeL1KT7iteA0iRxAUF1Ps1-NLUWXlescBZ-8LKvNDFG35zLw2xqNwoN9wOx0BwMlnyKo6qydI-9ZtnXjCSiwm7HVki9Wm2JijXkGRKVW0AL4vYj7LlhTf0ysfUoqt4xQhO7eezRkMR518emZHrM0r-_0jSj87ghX2LAO3Dfm2GJxq_pKYe0bPLmQ7elqIbicN6HzJnG2sLIp6Tgk1yyIriTUM-B-9ORKZpv_qp6kJS2b5dcly7VZ7djkldQD13YI3-jHRXeCJlyTZ1c6MFa_AQCz41ZN0YDqVtfOicJ71J6SmZPUyCHTVT9D4CjcFCYu0RNlPa5HacW9jXsYVtPejX-N_WGLz-kj4AZYdF7fv0NFYF163r2SFxlji9FzLC5nyyQ=w1080-h200-s-no-gm?authuser=0');
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+  }
+
+  .banner a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+
   .buttons {
     position: fixed;
     bottom: 0;
@@ -32,6 +51,7 @@
     display: flex;
     justify-content: space-around;
     border-top: 1px solid #ced4da;
+    z-index: 20;
   }
 
   .buttons a {
@@ -67,10 +87,14 @@
 <body>
 
 <div class="container">
-  <img src="https://cc.tvbs.com.tw/2017program/cars/images/uploads/2024/05/21185334/240521_Hyundai-Ioniq-N-001_fromHyundai.jpg" alt="第一張圖片">
-  <img src="https://cc.tvbs.com.tw/2017program/cars/images/uploads/2024/05/21185334/240521_Hyundai-Ioniq-N-001_fromHyundai.jpg" alt="第一張圖片">
-  <img src="https://cc.tvbs.com.tw/2017program/cars/images/uploads/2024/05/21185334/240521_Hyundai-Ioniq-N-001_fromHyundai.jpg" alt="第一張圖片">
-  <img src="https://cc.tvbs.com.tw/2017program/cars/images/uploads/2024/05/21185334/240521_Hyundai-Ioniq-N-001_fromHyundai.jpg" alt="第一張圖片">
+  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="第一張圖片">
+  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="第一張圖片">
+  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="第一張圖片">
+  <img src="https://lh3.googleusercontent.com/pw/AP1GczNujvprgTrMZFuJ7Ri4i4mlQRa2KdMj9S779iGqtTzNO4BTNfNRcKJnL-j2aOzVy5ZpRPitb9mMEtV2IHrIDjcySFBaiNmrtI1oaciiFYIIAVKmHIn_nnzT9eXA5j0Wx3OaS-929qfmRymlGqNKS10yjw=w549-h768-s-no-gm?authuser=0" alt="第一張圖片">
+</div>
+
+<div class="banner">
+  <a href="https://www.google.com" target="_blank"></a>
 </div>
 
 <div class="buttons">
