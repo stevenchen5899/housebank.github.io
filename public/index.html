@@ -22,6 +22,35 @@
     display: block;
   }
 
+  .new-buttons-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .new-button {
+    width: 800px;
+    height: 700px;
+    background-size: cover;
+    text-align: center;
+    line-height: 700px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+  }
+
+  .left-button {
+    background-color: blue;
+  }
+
+  .right-button {
+    background-color: green;
+  }
+
   .buttons {
     position: fixed;
     bottom: 0;
@@ -71,6 +100,11 @@
   <img src="https://img2.imgtp.com/2024/05/23/rcKDzyMA.png" alt="第一張圖片">
   <img src="https://img2.imgtp.com/2024/05/23/OEFEGwyF.png" alt="第二張圖片">
   <img src="https://img2.imgtp.com/2024/05/24/xxF9s9SR.png" alt="第四張圖片">
+</div>
+
+<div class="new-buttons-container">
+  <a href="https://example.com" class="new-button left-button">左邊按鈕</a>
+  <a href="tel:0968333591" class="new-button right-button">撥打手機</a>
 </div>
 
 <div class="buttons">
