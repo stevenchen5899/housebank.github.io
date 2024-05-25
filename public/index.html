@@ -24,11 +24,11 @@
   }
 
   .floating-buttons-container {
-    position: absolute;
+    position: fixed; /* 使用fixed定位 */
     width: 100%;
-    bottom: 0; /* 懸浮按鈕的底部與第四張圖的底部對齊 */
+    bottom: 110px; /* 懸浮按鈕往上移50px */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     z-index: 10;
   }
 
