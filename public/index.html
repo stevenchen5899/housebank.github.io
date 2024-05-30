@@ -26,7 +26,7 @@
   .floating-buttons-container {
     position: fixed;
     width: 100%;
-    bottom: 120px; /* 距離底部距離修改為120px */
+    bottom: 0; /* 將浮動按鈕移到底部 */
     display: flex;
     justify-content: space-around;
     z-index: 10;
@@ -36,7 +36,6 @@
     width: 33.33%;
     height: 150px; /* 修改按鈕高度為150px */
     display: inline-block;
-    margin-top: 10px; /* 往下移動至底部按鈕上方10px處 */
   }
 
   .floating-button a {
@@ -49,7 +48,7 @@
 
   .buttons {
     position: fixed;
-    bottom: 0;
+    bottom: 150px; /* 將底部按鈕移動到浮動按鈕上面 */
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
